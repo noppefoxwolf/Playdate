@@ -1,10 +1,11 @@
 #define TARGET_EXTENSION 1
 #include "panic/pd_api.h"
+#include "undocumented/pd_wifi.h"
 
-void logToConsole(playdate_sys system, const char* fmt) {
-  system.logToConsole(fmt);
+void logToConsole(PlaydateAPI *pd, const char* fmt) {
+    pd->system->logToConsole(fmt);
 }
 
-void errorToConsole(playdate_sys system, const char* fmt) {
-  system.error(fmt);
+void errorToConsole(PlaydateAPI *pd, const char* fmt) {
+    pd->system->error(fmt);
 }

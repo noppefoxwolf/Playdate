@@ -13,5 +13,11 @@ let package = Package(
     .systemLibrary(
       name: "CPlaydate"
     ),
+    .testTarget(
+        name: "CPlaydateTests",
+        dependencies: [
+            "CPlaydate"
+        ]
+    )
   ]
 )
